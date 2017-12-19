@@ -1,5 +1,5 @@
 group 'net.andreho'
-version '8.1.0'
+version projectVersion
 
 buildscript {
   repositories {
@@ -39,7 +39,7 @@ dependencies {
   testCompile "org.assertj:assertj-core:$assertjVersion"  
 }
 
-defaultTasks 'clean', 'build', 'test', 'install'
+defaultTasks 'clean', 'build', 'test', 'install', 'publishToMavenLocal'
 
 task sourceJar(type: Jar) {
   from sourceSets.main.allJava
